@@ -1,0 +1,4 @@
+robotframework>=6.0.1
+robotframework-seleniumlibrary>=6.0.0
+webdriver-manager robotframework robotframework-seleniumlibrary
+robotframework-datadriver

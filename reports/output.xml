@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.5 on darwin)" generated="20230424 00:22:06.178" rpa="false" schemaversion="3">
+<suite id="s1" name="TC-01 search hotel web" source="/Users/santhosh/Documents/robotframework_selenium/test_suite/regression/TC-01_search_hotel_web.robot">
+<test id="s1-t1" name="TC-01 Serach Hotel Validate Required Field" line="23">
+<kw name="Start Test">
+<arg>Search Hotel</arg>
+<arg>Hello Autoboys!</arg>
+<kw name="Launch Browser" library="core_browser_web">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${${env}.url}</arg>
+<arg>browser=${${env}.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230424 00:22:06.427" level="INFO">Opening browser 'chrome' to base url 'http://adactinhotelapp.com/'.</msg>
+<status status="PASS" starttime="20230424 00:22:06.425" endtime="20230424 00:22:10.927"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230424 00:22:10.928" endtime="20230424 00:22:11.343"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:06.425" endtime="20230424 00:22:11.343"/>
+</kw>
+<kw name="Login Hotel With Valid Credential" library="key_login_web">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${username_input_field}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 00:22:11.344" endtime="20230424 00:22:11.376"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_input_field}</arg>
+<arg>text=${${env}.username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 00:22:11.378" level="INFO">Typing text 'Autoboys' into text field 'css=#username'.</msg>
+<status status="PASS" starttime="20230424 00:22:11.376" endtime="20230424 00:22:11.526"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_input_field}</arg>
+<arg>text=${${env}.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 00:22:11.528" level="INFO">Typing text 'Testing@12345' into text field 'css=#password'.</msg>
+<status status="PASS" starttime="20230424 00:22:11.526" endtime="20230424 00:22:11.645"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:11.343" endtime="20230424 00:22:11.645"/>
+</kw>
+<kw name="Click Login Button" library="key_login_web">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 00:22:11.647" endtime="20230424 00:22:11.672"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230424 00:22:11.689" level="INFO">Element 'css=#login' is displayed.</msg>
+<status status="PASS" starttime="20230424 00:22:11.672" endtime="20230424 00:22:11.689"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230424 00:22:11.690" level="INFO">Clicking button 'css=#login'.</msg>
+<status status="PASS" starttime="20230424 00:22:11.689" endtime="20230424 00:22:13.720"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:11.646" endtime="20230424 00:22:13.720"/>
+</kw>
+<kw name="Validate Search Hotel Header" library="key_search_hotel_web">
+<arg>${text_search_hotel}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${search_hotel_text}</arg>
+<arg>30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 00:22:13.721" endtime="20230424 00:22:13.744"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${search_hotel_text}</arg>
+<arg>${text_search_hotel}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230424 00:22:13.766" level="INFO">Element 'css=.login_title' contains text 'Search Hotel'.</msg>
+<status status="PASS" starttime="20230424 00:22:13.744" endtime="20230424 00:22:13.766"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:13.720" endtime="20230424 00:22:13.766"/>
+</kw>
+<kw name="Validate Search Hotel Username" library="key_search_hotel_web">
+<arg>${value_search_hotel_username}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${serach_hotel_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 00:22:13.767" endtime="20230424 00:22:13.786"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>${serach_hotel_username}</arg>
+<arg>value</arg>
+<arg>${value_search_hotel_username}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20230424 00:22:13.806" level="INFO">Element 'css=#username_show' attribute 'value' contains value 'Hello Autoboys!'.</msg>
+<status status="PASS" starttime="20230424 00:22:13.787" endtime="20230424 00:22:13.807"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:13.766" endtime="20230424 00:22:13.807"/>
+</kw>
+<kw name="Close All Web Browser" library="core_browser_web">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230424 00:22:13.807" endtime="20230424 00:22:13.903"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:13.807" endtime="20230424 00:22:13.903"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:06.424" endtime="20230424 00:22:13.904"/>
+</kw>
+<status status="PASS" starttime="20230424 00:22:06.423" endtime="20230424 00:22:13.904"/>
+</test>
+<status status="PASS" starttime="20230424 00:22:06.181" endtime="20230424 00:22:13.905"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC-01 search hotel web">TC-01 search hotel web</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
