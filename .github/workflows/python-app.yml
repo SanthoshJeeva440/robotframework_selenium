@@ -28,7 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         python3 -m pip install -r resources/configuration/requirements.txt
         python3 -m pip install webdriver-manager robotframework robotframework-seleniumlibrary
-        python3 -m pip webdrivermanager chrome
     - name: Test with robot
       run: |
          robot ./test_suite
