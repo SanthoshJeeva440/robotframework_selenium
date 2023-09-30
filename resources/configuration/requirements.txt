@@ -1,5 +1,3 @@
-robotframework>=6.0.1
-robotframework-seleniumlibrary>=6.0.0
-webdrivermanager
-webdrivermanager firefox chrome
+robotframework
+robotframework-seleniumlibrary
 robotframework-datadriver
