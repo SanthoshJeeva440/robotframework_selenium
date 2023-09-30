@@ -5,9 +5,9 @@ name: Robot Framework
 
 on:
   push:
-    branches: [ "Santhosh-feature/ci-cd" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "Santhosh-feature/ci-cd" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
