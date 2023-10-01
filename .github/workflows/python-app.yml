@@ -32,8 +32,6 @@ jobs:
     - name: Test with robot
       run: |
          robot ./test_suite
-    - name: Upload test results
-      uses: actions/upload-artifact@v1
         
   generate_report:
 
