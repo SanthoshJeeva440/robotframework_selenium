@@ -44,6 +44,6 @@ jobs:
         with:
           name: reports
       - name: Send report to commit
-        uses: SanthoshJeeva440/robotframework_selenium
+        uses: SanthoshJeeva440/robotframework_selenium@v2
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
