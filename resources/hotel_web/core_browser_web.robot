@@ -9,7 +9,7 @@ Resource        ../../page_object/po_web_page.robot
 
 Launch Browser
 
-        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=HeadlessChrome
+        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=Chrome    options=add_argument("--headless"); add_argument("--no-sandbox"); add_argument('--disable-dev-shm-usage'); add_argument("--ignore-certificate-errors")
         SeleniumLibrary.Maximize Browser Window
 
 Close Web Browser
