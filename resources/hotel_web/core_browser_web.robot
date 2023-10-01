@@ -11,7 +11,7 @@ Launch Browser
 
         SeleniumLibrary.Open Browser    url=${${env}.url}     browser=${${env}.browser}
         SeleniumLibrary.Maximize Browser Window
-         
+
 Close Web Browser
 
         SeleniumLibrary.Close Browser
