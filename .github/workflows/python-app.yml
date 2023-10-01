@@ -32,8 +32,16 @@ jobs:
     - name: Test with robot
       run: |
          robot ./test_suite
+    - name: Upload test results
+      uses: actions/upload-artifact@v1
+      if: always()
+    with:
+      name: reports
+      path: reports
         
   generate_report:
+    if: always()
+    needs: [test]
 
     runs-on: ubuntu-latest
 
@@ -44,6 +52,6 @@ jobs:
         with:
           name: reports
       - name: Send report to commit
-        uses: SanthoshJeeva440/robotframework_selenium@v2
+        uses: SanthoshJeeva440/robotframework_selenium
         with:
           gh_access_token: ${{ secrets.GITHUB_TOKEN }}
