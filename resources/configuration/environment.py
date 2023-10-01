@@ -3,7 +3,7 @@ env = "qa"
 
 class qa:
 
-    browser = "firefox"
+    browser = "headlesschrome"
     url = "http://adactinhotelapp.com/"
     username = "Auto1Boyz"
     password = "Testing@12345"

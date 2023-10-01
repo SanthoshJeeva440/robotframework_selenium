@@ -9,7 +9,7 @@ Resource        ../../page_object/po_web_page.robot
 
 Launch Browser
 
-        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=${${env}.browser}
+        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=HeadlessChrome
         SeleniumLibrary.Maximize Browser Window
 
 Close Web Browser
