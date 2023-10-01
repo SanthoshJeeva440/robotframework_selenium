@@ -3,7 +3,7 @@ env = "qa"
 
 class qa:
 
-    browser = "google-chrome"
+    browser = "Chrome"
     url = "http://adactinhotelapp.com/"
     username = "Auto1Boyz"
     password = "Testing@12345"
