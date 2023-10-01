@@ -34,14 +34,8 @@ jobs:
          robot ./test_suite
     - name: Upload test results
       uses: actions/upload-artifact@v1
-      if: always()
-    with:
-      name: reports
-      path: reports
         
   generate_report:
-    if: always()
-    needs: [test]
 
     runs-on: ubuntu-latest
 
