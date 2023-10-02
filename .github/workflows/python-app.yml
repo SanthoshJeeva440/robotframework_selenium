@@ -28,7 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           python3 -m pip install -r resources/configuration/requirements.txt
           python3 -m pip install webdrivermanager
-          python3 -m pip install webdrivermanager firefox chrome
+          webdrivermanager firefox chrome
       - name: Test with robot
         run: |
           robot -d reports -v mode:--headless ./test_suite
