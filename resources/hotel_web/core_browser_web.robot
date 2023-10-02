@@ -5,11 +5,16 @@ Library     SeleniumLibrary     run_on_failure=AppiumLibrary.Capture Page Screen
 Variables       ../configuration/environment.py
 Resource        ../../page_object/po_web_page.robot
 
+*** Variables ***
+
+${mode}     --head
+
 *** Keywords ***
 
 Launch Browser
 
-        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=Chrome    options=add_argument("--headless"); add_argument("--no-sandbox"); add_argument('--disable-dev-shm-usage'); add_argument("--ignore-certificate-errors")
+
+        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=Chrome    options=add_argument("${mode}"); add_argument("--no-sandbox"); add_argument('--disable-dev-shm-usage'); add_argument("--ignore-certificate-errors")
         SeleniumLibrary.Maximize Browser Window
 
 Close Web Browser
