@@ -31,7 +31,7 @@ jobs:
           webdrivermanager firefox chrome
       - name: Test with robot
         run: |
-          robot -d reports./test_suite
+          robot -d reports ./test_suite
       - name: Upload test results
         uses: actions/upload-artifact@v3
         if: always()
