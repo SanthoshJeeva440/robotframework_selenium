@@ -1,0 +1,5 @@
+--name edge
+--variable browser:edge
+--output edge-output.xml
+--report edge-report.html
+--log edge-log.html

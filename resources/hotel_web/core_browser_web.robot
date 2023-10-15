@@ -14,7 +14,7 @@ ${mode}     --head
 Launch Browser
 
 
-        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=Chrome    options=add_argument("${mode}"); add_argument("--no-sandbox"); add_argument('--disable-dev-shm-usage'); add_argument("--ignore-certificate-errors")
+        SeleniumLibrary.Open Browser    url=${${env}.url}     browser=${browser}   options=add_argument("${mode}"); add_argument("--no-sandbox"); add_argument('--disable-dev-shm-usage'); add_argument("--ignore-certificate-errors")
         SeleniumLibrary.Maximize Browser Window
 
 Close Web Browser

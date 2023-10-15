@@ -1,0 +1,5 @@
+--name Firefox
+--variable browser:firefox
+--output firefox-output.xml
+--report firefox-report.html
+--log firefox-log.html
