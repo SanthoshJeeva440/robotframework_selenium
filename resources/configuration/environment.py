@@ -1,33 +1,30 @@
-
 env = "qa"
 
-class qa:
+browser = "chrome"
 
-    browser = "chrome"
+
+class qa:
     url = "http://adactinhotelapp.com/"
     username = "Auto1Boyz"
     password = "Testing@12345"
     test_date_path = "test_data/qa_test_data.csv"
 
-class dev:
 
-    browser = "chrome"
+class dev:
     url = "https://www.facebook.com/"
     username = ""
     password = ""
     test_date_path = "test_data/dev_test_data.csv"
 
-class stage:
 
-    browser = "chrome"
+class stage:
     url = ""
     username = ""
     password = ""
     test_date_path = "test_data/stage_test_data.csv"
 
-class prod:
 
-    browser = "chrome"
+class prod:
     url = ""
     username = ""
     password = ""

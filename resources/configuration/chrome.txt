@@ -1,0 +1,5 @@
+--name Chrome
+--variable browser:chrome
+--output chrome-output.xml
+--report chrome-report.html
+--log chrome-log.html
