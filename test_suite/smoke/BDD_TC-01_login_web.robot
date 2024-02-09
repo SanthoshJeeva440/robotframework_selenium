@@ -7,7 +7,8 @@ Resource        ../../resources/keyword/key_login_web.robot
 
 TC-01 Lunch Browser & Login With Valid Credential
 
-        Launch Browser
-        Login Hotel With Valid Credential
-        Click Login Button
-        Close All Web Browser
+        [Tags]    TC-01     smoke
+        Given Login Hotel With Valid Credential
+        When Click Login Button
+        And Click Logout Button
+        Then Click Again Login Button

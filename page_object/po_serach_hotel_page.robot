@@ -29,3 +29,7 @@ ${select_child_room}        css=#child_room
 ${search_button}        css=#Submit
 
 ${reset_button}     css=#Reset
+
+${logout_button}        css=.welcome_menu>a:nth-child(5)
+
+${again_login_button}       css=.reg_success>a
