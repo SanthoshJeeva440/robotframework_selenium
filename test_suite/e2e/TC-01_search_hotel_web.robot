@@ -11,13 +11,15 @@ Test Template       Start Test
 Start Test
 
         [Arguments]    ${text_search_hotel}    ${value_search_hotel_username}
-        Launch Browser
         Login Hotel With Valid Credential
         Click Login Button
         Validate Search Hotel Header    ${text_search_hotel}
         Validate Search Hotel Username    ${value_search_hotel_username}
-        Close All Web Browser
+        Click Logout Button
+        Click Again Login Button
 
 *** Test Cases ***
 
-TC-01 Serach Hotel Validate Required Field
+TC-01 Serach Hotel Validate Required Field  ${text_search_hotel}    ${value_search_hotel_username}
+
+          [Tags]    TC-01     e2e

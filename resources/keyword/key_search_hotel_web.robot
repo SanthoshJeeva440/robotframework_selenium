@@ -1,6 +1,6 @@
 *** Settings ***
 
-Library     SeleniumLibrary     run_on_failure=AppiumLibrary.Capture Page Screenshot
+Library     SeleniumLibrary     run_on_failure=SeleniumLibrary.Capture Page Screenshot
 Resource    ../../page_object/po_web_page.robot
 
 *** Keywords ***
