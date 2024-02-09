@@ -1,6 +1,6 @@
 *** Settings ***
 
-#Resource    ../../resources/hotel_web/core_browser_web.robot
+Resource    ../../resources/hotel_web/core_browser_web.robot
 Resource    ../../resources/keyword/key_login_web.robot
 Resource    ../../resources/keyword/key_search_hotel_web.robot
 Library     DataDriver      file=${${env}.test_date_path}
