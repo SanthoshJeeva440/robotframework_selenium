@@ -1,4 +1,5 @@
 robotframework
 robotframework-seleniumlibrary
-robotframework-datadriver
 robotframework-pabot
+pyyaml
+robotframework-tidy
