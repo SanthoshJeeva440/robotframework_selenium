@@ -8,7 +8,7 @@ Test Teardown    Close Web Browser -> this keyword is close all browser
 Documentation       This file is used for launch & close browser Test and suite level
 ...                 Configuration
 
-Resource            ../resources/hotel_web/core_browser_web.robot
+Resource            ../resources/hotel_web/core_browser_web.resource
 
 Test Setup          Launch Browser
 Test Teardown       Close Web Browser

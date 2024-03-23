@@ -1,7 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary    run_on_failure=SeleniumLibrary.Capture Page Screenshot
 Variables       ../configuration/environment.py
-Resource        ../../page_object/po_web_page.robot
+Resource        ../../page_object/po_web_page.resource
 
 
 *** Keywords ***
