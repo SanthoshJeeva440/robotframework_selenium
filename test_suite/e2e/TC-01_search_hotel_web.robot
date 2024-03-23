@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../../resources/hotel_web/core_browser_web.robot
-Resource    ../../resources/keyword/key_login_web.robot
-Resource    ../../resources/keyword/key_search_hotel_web.robot
+Resource    ../../resources/hotel_web/core_browser_web.resource
+Resource    ../../resources/keyword/key_login_web.resource
+Resource    ../../resources/keyword/key_search_hotel_web.resource
 Resource    ../../test_data/test_data.resource
 
 

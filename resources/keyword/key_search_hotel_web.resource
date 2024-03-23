@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary    run_on_failure=SeleniumLibrary.Capture Page Screenshot
-Resource    ../../page_object/po_web_page.robot
+Resource    ../../page_object/po_web_page.resource
 
 
 *** Keywords ***
