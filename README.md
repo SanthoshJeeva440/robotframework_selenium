@@ -21,21 +21,21 @@ Mac or Linux-Run Install Libraries.sh
 ### Single Suite Test
 
 ```bash
-python3 -m robot -d reports ./test_suite/smoke/TC-01_login_web.robot
+python3 -m robot -d reports ./test_suite/smoke/BDD_TC-01_login_web.robot
 ```
 
 ### Execute All Suite
 
 ```bash
-python3 -m robot -d reports ./test_suite/smoke/
+python3 -m robot -d reports ./test_suite
+```
+### Execute Particular Suite With Using Tags Name
+```bash
+python3 -m robot -d reports --include e2e./test_suite
 ```
 
 ```bash
-python3 -m robot -d reports ./test_suite/e2e/
-```
-
-```bash
-python3 -m robot -d reports ./test_suite/regression/
+python3 -m robot -d reports --include TC-01 ./test_suite
 ```
 
 ## Run Suite With Different Environment
@@ -44,11 +44,28 @@ python3 -m robot -d reports ./test_suite/regression/
 ### Default-Suite Execution On QA Environment
 
 ```bash
-python3 -m robot -d reports -v env:dev ./test_suite/smoke/TC-01_login_web.robot
+python3 -m robot -d reports -v env:dev --include TC-01 ./test_suite
 ```
 
 ### Run Suite Excution On-Dev Environment
 
 ```bash
-python3 -m robot -d reports -v env:stage ./test_suite/smoke/TC-01_login_web.robot
+python3 -m robot -d reports -v env:stage --include TC-01 ./test_suite
+```
+
+## BDD RobotFramework
+
+Put file name like BDD_login_.robot then only can able to use gherkin keywords,
+Given, When, Then, And, But
+
+```robotframework
+*** Test Cases ***
+
+TC-01 Lunch Browser & Login With Valid Credential
+
+        [Tags]    TC-01     smoke
+        Given Login Hotel With Valid Credential
+        When Click Login Button
+        And Click Logout Button
+        Then Click Again Login Button
 ```
