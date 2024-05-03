@@ -1,6 +1,6 @@
 .idea
 .DS_Store
-venv
+.venv
 __pycache__/
 *.py[cod]
 *$py.class
@@ -8,3 +8,5 @@ __pycache__/
 *.html
 *.xml
 output
+activate
+deactivate

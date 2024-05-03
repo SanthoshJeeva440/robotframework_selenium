@@ -1,6 +1,6 @@
 *** Settings ***
 
-Library     SeleniumLibrary     run_on_failure=AppiumLibrary.Capture Page Screenshot
+Library     SeleniumLibrary
 Variables   ../configuration/environment.py
 Resource    ../../page_object/po_web_page.robot
 

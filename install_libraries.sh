@@ -1,4 +1,4 @@
-# install libraries through pip mamanger
+# install libraries through pip manager
 
 echo "Installing requirements"
 chmod 0755 resources/configuration/requirements.txt
