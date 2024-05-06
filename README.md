@@ -18,10 +18,10 @@ Mac or Linux-Run Install Libraries.sh
 ### Execution
 
 
-### Single Suite Test
+### Single Test Case Execution
 
 ```bash
-python3 -m robot -d reports ./test_suite/smoke/BDD_TC-01_login_web.robot
+python3 -m robot -d reports -t "TC-01 Lunch Browser & Login With Valid Credential" /test_suite
 ```
 
 ### Execute All Suite
@@ -47,7 +47,7 @@ python3 -m robot -d reports --include TC-01 ./test_suite
 python3 -m robot -d reports -v env:dev --include TC-01 ./test_suite
 ```
 
-### Run Suite Excution On-Dev Environment
+### Run Suite Execution On-Dev Environment
 
 ```bash
 python3 -m robot -d reports -v env:stage --include TC-01 ./test_suite

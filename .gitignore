@@ -1,6 +1,5 @@
 .idea
 .DS_Store
-.venv
 __pycache__/
 *.py[cod]
 *$py.class
@@ -10,3 +9,4 @@ __pycache__/
 output
 activate
 deactivate
+venv
