@@ -5,7 +5,7 @@ browser = "chrome"
 
 class qa:
     url = "http://adactinhotelapp.com/"
-    username = "WebAuto123"
+    username = "Sura12345"
     password = "Testing@12345"
 
 

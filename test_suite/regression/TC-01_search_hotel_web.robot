@@ -8,7 +8,7 @@ Resource    ../../test_data/test_data.resource
 *** Test Cases ***
 TC-01 Serach Hotel Validate Required Field    [Tags]    tc-01    regression
 
-    Login Hotel With Valid Credential
+    Login Hotel With Valid Credential    USERNAME=${USERNAME}    PASSWORD=${PASSWORD}
     Click Login Button
     Validate Search Hotel Header    ${text_search_hotel}
     Validate Search Hotel Username    ${value_search_hotel_username}
