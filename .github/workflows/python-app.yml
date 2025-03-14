@@ -29,6 +29,9 @@ jobs:
           python3 -m pip install -r resources/configuration/requirements.txt
           python3 -m pip install webdrivermanager
           webdrivermanager firefox chrome
+          python3 -m pip install -e .
+          python3 -m pip cache purge
+
       - name: Test with robot
         run: |
           robot -d reports -v mode:--headless ./test_suite

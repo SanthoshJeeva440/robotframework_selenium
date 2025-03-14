@@ -69,3 +69,18 @@ TC-01 Lunch Browser & Login With Valid Credential
         And Click Logout Button
         Then Click Again Login Button
 ```
+## Importing a Custom Library in Robot Framework Without Using an Absolute Path
+
+Instead of importing a custom library using an absolute path like this:
+```robotframework
+*** Settings ***
+Library         SeleniumLibrary
+Library         ../../custom_library/CustomLibrary.py
+```
+
+You can import it more efficiently like this:
+```robotframework
+*** Settings ***
+Library         SeleniumLibrary
+Library         custom_library.CustomLibrary
+```

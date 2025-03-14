@@ -10,3 +10,4 @@ output
 activate
 deactivate
 venv
+*.egg-info/

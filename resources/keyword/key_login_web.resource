@@ -1,17 +1,21 @@
 *** Settings ***
 Library         SeleniumLibrary    run_on_failure=SeleniumLibrary.Capture Page Screenshot
+Library         custom_library.CustomLibrary
 Variables       ../configuration/environment.py
 Resource        ../../page_object/po_web_page.resource
 
 
 *** Keywords ***
 Login Hotel With Valid Credential
-    [Arguments]     ${USERNAME}     ${PASSWORD}
+    [Arguments]    ${USERNAME}    ${PASSWORD}
     SeleniumLibrary.Wait Until Element Is Visible    ${username_input_field}    30s
-    SeleniumLibrary.Input Text    ${username_input_field}    ${USERNAME}
-    SeleniumLibrary.Input Text    ${password_input_field}    ${PASSWORD}
-#    SeleniumLibrary.Input Text    ${username_input_field}    text=${${env}.username}
-#    SeleniumLibrary.Input Text    ${password_input_field}    text=${${env}.password}
+    IF    $USERNAME != '${EMPTY}'
+        SeleniumLibrary.Input Text    ${username_input_field}    ${USERNAME}
+        SeleniumLibrary.Input Text    ${password_input_field}    ${PASSWORD}
+    ELSE
+        SeleniumLibrary.Input Text    ${username_input_field}    text=${${env}.username}
+        SeleniumLibrary.Input Text    ${password_input_field}    text=${${env}.password}
+    END
 
 Click Login Button
     SeleniumLibrary.Wait Until Element Is Visible    ${login_button}    30s

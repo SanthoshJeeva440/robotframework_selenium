@@ -1,3 +1,4 @@
+setuptools
 robotframework
 robotframework-seleniumlibrary
 robotframework-pabot
