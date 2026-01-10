@@ -82,5 +82,5 @@ You can import it more efficiently like this:
 ```robotframework
 *** Settings ***
 Library         SeleniumLibrary
-Library         custom_library.CustomLibrary 
+Library         custom_library.CustomLibrary
 ```
