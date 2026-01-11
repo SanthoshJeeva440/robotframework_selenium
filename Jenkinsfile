@@ -26,7 +26,7 @@ pipeline {
             steps {
                 withChecks(name: 'Robot Tests', includeStage: true) {
                     sh '''
-                        robot --version
+                        python3 -m robot --version
                     '''
                 }
             }
