@@ -17,7 +17,6 @@ pipeline {
                         python3 -m pip install --upgrade pip setuptools
                         python3 -m pip install -r resources/configuration/requirements.txt --no-cache-dir -v
                         python3 -m pip install webdrivermanager
-                        python3 -m robot --version
                     '''
                 }
             }
@@ -28,7 +27,7 @@ pipeline {
                 withChecks(name: 'Robot Tests', includeStage: true) {
                     sh '''
                         . venv/bin/activate
-                        python3 -m robot --version
+                        python3 -m pip list
                     '''
                 }
             }
