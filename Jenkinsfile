@@ -26,7 +26,6 @@ pipeline {
             steps {
                 withChecks(name: 'Robot Tests', includeStage: true) {
                     sh '''
-                        . venv/bin/activate
                         robot --version
                     '''
                 }
