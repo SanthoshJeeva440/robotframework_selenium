@@ -27,7 +27,7 @@ pipeline {
                 withChecks(name: 'Robot Tests', includeStage: true) {
                     sh '''
                         . venv/bin/activate
-                        python3 -m robot -d ./output -v mode:--headless -v browser:chromium /test_suite
+                        python3 -m robot -d ./output -v mode:--headless -v browser:chromium ./test_suite
                     '''
                 }
             }
