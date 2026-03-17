@@ -16,7 +16,7 @@ pipeline {
                         . venv/bin/activate
                         python3 -m pip install --upgrade pip setuptools
                         python3 -m pip install -r resources/configuration/requirements.txt --no-cache-dir -v
-                        python3 -m pip install webdrivermanager
+                        python3 -m pip install webdriver-manager
                     '''
                 }
             }
