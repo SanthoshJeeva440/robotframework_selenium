@@ -22,7 +22,7 @@ Launch Browser
     SeleniumLibrary.Open Browser
     ...    url=${${env}.url}
     ...    browser=${browser}
-    ...    options=${options})
+    ...    options=${options}
     SeleniumLibrary.Maximize Browser Window
 
 Close Web Browser
