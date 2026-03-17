@@ -12,10 +12,17 @@ ${mode}     --head
 
 *** Keywords ***
 Launch Browser
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser.capitalize()}Options()    sys
+
+    Call Method    ${options}    add_argument    ${mode}
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --ignore-certificate-errors
+
     SeleniumLibrary.Open Browser
     ...    url=${${env}.url}
     ...    browser=${browser}
-    ...    options=add_argument("${mode}"); add_argument("--no-sandbox"); add_argument('--disable-dev-shm-usage'); add_argument("--ignore-certificate-errors")
+    ...    options=${options})
     SeleniumLibrary.Maximize Browser Window
 
 Close Web Browser
