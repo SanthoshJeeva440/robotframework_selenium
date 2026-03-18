@@ -12,7 +12,7 @@ ${mode}     --head
 
 *** Keywords ***
 Launch Browser
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser.capitalize()}Options()    sys
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser}.options.Options()    sys
 
     Call Method    ${options}    add_argument    ${mode}
     Call Method    ${options}    add_argument    --no-sandbox
