@@ -5,7 +5,7 @@ browser = "chrome"
 
 class qa:
     url = "http://adactinhotelapp.com/"
-    username = "Aravind00"
+    username = "ubuntu12"
     password = "Testing@12345"
 
 
